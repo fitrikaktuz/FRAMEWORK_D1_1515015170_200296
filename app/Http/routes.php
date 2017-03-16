@@ -11,6 +11,29 @@
 |
 */
 
-Route::get('Hello world', function () {
-    return 'Hello world';
+Route::get('/', function () {
+    return view('welcome');
 });
+
+Route::get('pengguna','PenggunaController@awal');
+Route::get('pengguna/tambah','PenggunaController@tambah');
+
+Route::get('ruangan','RuanganController@awal');
+Route::get('ruangan/tambah','RuanganController@tambah');
+
+Route::get('matakuliah','MatakuliahController@awal');
+Route::get('matakuliah/tambah','MatakuliahController@tambah');
+
+Route::get('mahasiswaa','MahasiswaaController@awal');
+Route::get('mahasiswaa/tambah','MahasiswaaController@tambah');
+
+Route::get('dosen','DosenController@awal');
+Route::get('dosen/tambah','DosenController@tambah');
+
+Route::get('dosen_matakuliah','Dosen_matakuliahController@awal');
+Route::get('dosen_matakuliah/tambah','Dosen_matakuliahController@tambah');
+
+Route::get('jadwal_matakuliah','Jadwal_matakuliahController@awal');
+Route::get('jadwal_matakuliah/tambah','Jadwal_matakuliahController@tambah');
+
+
