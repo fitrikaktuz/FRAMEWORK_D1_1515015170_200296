@@ -77,7 +77,7 @@
 					<nav class="navbar navbar-default navbar-fixed-bottom">
 					<footer class="container">
 									<!-- please dont delete this -->
-									created by <a href="http://twitter.com/triasbrata"><span><i class="fa fa-twitter" style="color:#1da1f2"></i> @triasbrata</span></a>
+									created by <a href="http://twitter.com/triasbrata"><span><i class="fa fa-twitter" style="color:#1da1f2"></i> @fitrikaktuz</span></a>
 									                                                                                                       <!--/ please dont delete this -->
 									                                                                                                       </footer>
 									                                                                                        </nav>
