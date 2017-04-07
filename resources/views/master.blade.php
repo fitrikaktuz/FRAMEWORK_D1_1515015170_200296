@@ -27,7 +27,8 @@
 		<nav class="navbar navbar-default navbar-fixed-top">
 				<div class="container">
 					<div class="navbar-header">
-						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false"aria-controls="navbar">
+						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" 
+						aria-controls="navbar">
 							<span class="sr-only">Toggle navigation</span>
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
@@ -38,21 +39,24 @@
 					<div id="navbar" class="collapse navbar-collapse">
 						<ul class="nav navbar-nav">
 							<li class="dropdown active">
-								<a href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> Mahasiswa <span class="caret"></span> </a>
+								<a href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> Mahasiswa 
+								<span class="caret"></span> </a>
 								<ul class="dropdown-menu" aria-labelledby="dlabel">
 									<li><a href="{{url('mahasiswa')}}">Data Mahasiswa</a></li>
 									<li class="divider"></li>
 									<li><a href="{{url('jadwal_matakuliah')}}">Jadwal Mahasiswa</a></li></ul>
 									</li>
 									<li class="dropdown active">
-										<a href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> Dosen <span class="caret"></span></a>
+										<a href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> Dosen 
+										<span class="caret"></span></a>
 										<ul class="dropdown-menu" aria-labelledby="dlabel">
 											<li><a  href="{{url('dosen')}}">Data Dosen</a></li>
 											<li class="divider"></li>
 											<li><a href="{{url('dosen_matakuliah')}}">Jadwal Dosen Mengajar</a></li></ul>
 											</li>
 											<li class="dropdown active">
-												<a href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> Pengaturan <span class="caret"></span> </a>
+												<a href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> Pengaturan
+												<span class="caret"></span> </a>
 												<ul class="dropdown-menu" aria-labelledby="dlabel">
 													<li><a href="{{url('pengguna')}}">Pengguna</a></li>
 													<li class="divider"></li>
@@ -77,7 +81,7 @@
 					<nav class="navbar navbar-default navbar-fixed-bottom">
 					<footer class="container">
 									<!-- please dont delete this -->
-									created by <a href="http://twitter.com/triasbrata"><span><i class="fa fa-twitter" style="color:#1da1f2"></i> @fitrikaktuz</span></a>
+									created by <a href="http://twitter.com/triasbrata"><span><i class="fa fa-twitter" style="color:#1da1f2"></i> @triasbrata</span></a>
 									                                                                                                       <!--/ please dont delete this -->
 									                                                                                                       </footer>
 									                                                                                        </nav>
