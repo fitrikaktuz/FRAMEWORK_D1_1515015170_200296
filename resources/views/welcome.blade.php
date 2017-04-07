@@ -38,7 +38,7 @@
     <body>
         <div class="container">
             <div class="content">
-                <div class="title">Sri Uswatul</div>
+                <div class="title">Kaktuz</div>
             </div>
         </div>
     </body>

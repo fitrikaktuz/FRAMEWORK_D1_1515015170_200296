@@ -4,7 +4,7 @@
 	<div class="panel-heading">
 			<strong>Seluruh Data Dosen</strong>
 			<a href="{{ url('dosen/tambah') }}" class="btn btn-xs btn-primary pull-right">
-		<i class="fa fa-plus"></i> Dosen</a>
+		<i class="fa fa-plus"></i> dosen</a>
 				<div class="clearfix"></div>
 			</div>
 			<table class="table">
@@ -12,14 +12,14 @@
 							<tr>
 									<th>No.</th>
 									<th>Nama</th>
-									<th>Nip</th>
+									<th>NIP</th>
 									<th>Alamat</th>
 									<th>Aksi</th>
 							</tr>
 						</thead>
 						<tbody>
 								<?php $x=1?>
-								@foreach ($semuaDosen as $dosen)
+								@foreach ($semuadosen as $dosen)
 									<tr>
 									<td>{{ $x++ }}</td>
 									<td>{{ $dosen->nama or 'nama kosong'}}</td>

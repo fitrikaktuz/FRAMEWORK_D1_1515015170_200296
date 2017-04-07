@@ -31,11 +31,6 @@
 						<td>{{ $jadwal_matakuliah->dosen_matakuliah->matakuliah->title }}</td>
 				</tr>
 				<tr>
-						<td>Jenis Matakuliah</td>
-						<td>:</td>
-						<td>{{ $jadwal_matakuliah->dosen_matakuliah->matakuliah->keterangan }}</td>
-				</tr>
-				<tr>
 						<td class="col-xs-4">Dibuat tanggal</td>
 						<td class="col-xs-1">:</td>
 						<td>{{$jadwal_matakuliah->created_at}}</td>

@@ -24,7 +24,7 @@
 									<td>{{ $x++ }}</td>
 									<td>{{ $jadwal->mahasiswa->nama or 'nama kosong'}}</td>
 									<td>{{ $jadwal->mahasiswa->nim or 'nim kosong'}}</td>
-									<td>{{ $jadwal->dosen_matakuliah->matakuliah->title or 'title kosong'}}</td>
+									<td>{{ $jadwal->dosen_matakuliah->matakuliah->title or 'matakuliah kosong'}}</td>
 									<td>
 										<div class="btn-group" role="group">
 											<a href="{{url('jadwal_matakuliah/edit/'.$jadwal->id) }}" class="btn btn-info btn-xs" data-toggle="tooltip" data-placement="top" title="Ubah">
