@@ -34,6 +34,11 @@ class jadwal_matakuliahController extends Controller
    }
    public function simpan(Request $input)
    {
+      $this->validate($input,[
+         'mahasiswa'=>'required',
+         'matakuliah'=>'required',
+         'ruangan'=>'required',
+         ]);
    	$jadwal_matakuliah = new jadwal_matakuliah($input->only('ruangan_id','dosen_matakuliah_id','mahasiswa_id'));
    	if($jadwal_matakuliah->save()) $this->informasi = "Jadwal mahasiswa berhasil disimpan ";
       return redirect('jadwal_matakuliah')->with(['informasi' => $this->informasi]);

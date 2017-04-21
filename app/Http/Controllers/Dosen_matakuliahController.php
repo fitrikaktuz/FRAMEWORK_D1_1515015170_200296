@@ -31,6 +31,10 @@ class dosen_matakuliahController extends Controller
    }
    public function simpan(Request $input)
    {
+      $this->validate($input,[
+         'dosen'=>'required',
+         'matakuliah'=>'required',
+         ]);
    	$dosen_matakuliah = new dosen_matakuliah($input->only('dosen_id','matakuliah_id'));
       if ($dosen_matakuliah->save()) $this->informasi = "Jadwal Dosen Mengajar Berhasil Disimpan";
       return redirect('dosen_matakuliah')->with(['informasi' => $this->informasi]);
