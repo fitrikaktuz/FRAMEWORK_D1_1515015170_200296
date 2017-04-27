@@ -10,23 +10,14 @@
 | and give it the controller to call when that URI is requested.
 |
 */
+Route::get('/login','SesiController@form');
+Route::post('/login','SesiController@validasi');
+Route::get('/logout','SesiController@logout');
+Route::get('/','SesiController@index');
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
-Route::get('hello-world', function (){
-	return 'hello-World';
-});
-
-//Route::get('pengguna/{pengguna}', function ($pengguna){
-	//return "Hello-World dari pengguna $pengguna";
-//});
-
-Route::get('kelasd2/framework/{mhs?}', function ($mhs="Anonim"){// tanda tanya buat kalo mau pake parameter ataupun enda
-	return "Selamat Datang $mhs";
-});
-Route::get('pengguna','penggunaController@awal');
+Route::group(['middleware'=>'AutentifikasiUser'],function()
+{
+	Route::get('pengguna','penggunaController@awal');
 Route::get('pengguna/tambah','penggunaController@tambah');
 Route::get('pengguna/{pengguna}','penggunaController@lihat');
 Route::post('pengguna/simpan','penggunaController@simpan');
@@ -81,41 +72,60 @@ Route::post('jadwal_matakuliah/simpan','jadwal_matakuliahController@simpan');
 Route::get('jadwal_matakuliah/edit/{jadwal_matakuliah}','jadwal_matakuliahController@edit');
 Route::post('jadwal_matakuliah/edit/{jadwal_matakuliah}','jadwal_matakuliahController@update');
 Route::get('jadwal_matakuliah/hapus/{jadwal_matakuliah}','jadwal_matakuliahController@hapus');
-
-Route::get('ujiHas','RelationshipRebornController@ujiHas');
-
-Route::get('ujiDoesntHave','RelationshipRebornController@ujiDoesntHave');
-
-Route::get('/',function ()
-{
-	return \App\Dosen_Matakuliah :: whereHas('dosen',function($query)
-	{
-		$query->where('nama','like','%m%');
-	})
-	->orwhereHas('matakuliah',function($kueri)
-	{
-		$kueri->where('title','like','%a%');
-	})
-	->with('dosen','matakuliah')
-	->groupBy('dosen_id')
-	->get();
 });
 
-Route::get('/',function(Illuminate\Http\Request $request)
-{
-	echo "ini adalah request dari method get ". $request->nama;
-} );
 
-use Illuminate\Http\Request;
-Route::get('/',function()
-{
-	echo Form::open(['url'=>'/']).
-	Form::label('nama').
-	Form::text('nama',null).
-	Form::submit('kirim').
-	Form::close();
-});
-Route::post('/',function (Request $request)
-{
-	echo "Hasil dari form input tadi nama : ".$request->nama;
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+// Route::get('hello-world', function (){
+// 	return 'hello-World';
+// });
+
+// //Route::get('pengguna/{pengguna}', function ($pengguna){
+// 	//return "Hello-World dari pengguna $pengguna";
+// //});
+
+// Route::get('kelasd2/framework/{mhs?}', function ($mhs="Anonim"){// tanda tanya buat kalo mau pake parameter ataupun enda
+// 	return "Selamat Datang $mhs";
+// });
+
+
+// Route::get('ujiHas','RelationshipRebornController@ujiHas');
+
+// Route::get('ujiDoesntHave','RelationshipRebornController@ujiDoesntHave');
+
+// Route::get('/',function ()
+// {
+// 	return \App\Dosen_Matakuliah :: whereHas('dosen',function($query)
+// 	{
+// 		$query->where('nama','like','%m%');
+// 	})
+// 	->orwhereHas('matakuliah',function($kueri)
+// 	{
+// 		$kueri->where('title','like','%a%');
+// 	})
+// 	->with('dosen','matakuliah')
+// 	->groupBy('dosen_id')
+// 	->get();
+// });
+
+// Route::get('/',function(Illuminate\Http\Request $request)
+// {
+// 	echo "ini adalah request dari method get ". $request->nama;
+// } );
+
+// use Illuminate\Http\Request;
+// Route::get('/',function()
+// {
+// 	echo Form::open(['url'=>'/']).
+// 	Form::label('nama').
+// 	Form::text('nama',null).
+// 	Form::submit('kirim').
+// 	Form::close();
+// });
+// Route::post('/',function (Request $request)
+// {
+// 	echo "Hasil dari form input tadi nama : ".$request->nama;
+// });
